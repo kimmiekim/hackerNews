@@ -1,11 +1,10 @@
-<div class="main-content">
-  <ol>
-    <li *ngFor = "let item of items;
-                  let i = index"
-        class="post">
-        Story #{{i}}
+<div>
+  <ul class="list-group">
+    <li *ngFor = "let item of items | slice:0:30"
+        class="list-group-item justify-content-between">
+        <item itemID="{{ item }}"></item>
     </li>
-  </ol>
+  </ul>
   <div class="nav">
     <a href="" class="prev">
       < Prev

@@ -1,3 +1,26 @@
-<p>
- story #{{itemID}}
-</p>
+<div *ngIf="!item">
+  <!-- You can add a loading indicator here if you want to :) </i> -->
+</div>
+<div *ngIf="item">
+  <div>
+    <p>
+      <a href="{{item.url}}">
+        {{item.title}}
+      </a>
+      <span class="domain">{{item.url | domain}}</span>
+    </p>
+    <div>
+      {{item.score}} points by
+      <a href="">{{item.by}}</a>
+      {{ item.time }}
+      <a href="">
+        <span *ngIf="item.descendants !== 0">
+          {{item.descendants}}
+          <span *ngIf="item.descendants === 1">comment</span>
+          <span *ngIf="item.descendants > 1">comments</span>
+        </span>
+        <span *ngIf="item.descendants === 0">discuss</span>
+      </a>
+    </div>
+  </div>
+</div>
