@@ -12,6 +12,7 @@ import { ItemComponent } from './item/item.component';
 import { HackernewsApiService } from './hackernews-api.service';
 
 import { DomainPipe } from './domain.pipe';
+import { ItemCommentsComponent } from './item-comments/item-comments.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DomainPipe } from './domain.pipe';
     StoriesComponent,
     FooterComponent,
     ItemComponent,
-    DomainPipe
+    DomainPipe,
+    ItemCommentsComponent
   ],
   imports: [
     BrowserModule,
