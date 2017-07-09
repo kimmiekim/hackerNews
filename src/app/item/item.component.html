@@ -1,26 +1,22 @@
-<div *ngIf="!item">
-  <!-- You can add a loading indicator here if you want to :) </i> -->
-</div>
-<div *ngIf="item">
-  <div>
+
+<div id="content">
     <p>
-      <a href="{{item.url}}">
+      <a href="">
         {{item.title}}
       </a>
-      <span class="domain">{{item.url | domain}}</span>
+      <span *ngIf="item.domain">({{item.domain}})</span>
     </p>
     <div>
       {{item.score}} points by
-      <a href="">{{item.by}}</a>
-      {{ (item.time | amFromUnix) | amTimeAgo }}
+      <a href="">{{item.user}}</a>
+      {{item.time_ago}} |
       <a href="">
         <span *ngIf="item.descendants !== 0">
-          {{item.descendants}}
+          {{item.comments_count}} comments
           <span *ngIf="item.descendants === 1">comment</span>
           <span *ngIf="item.descendants > 1">comments</span>
         </span>
         <span *ngIf="item.descendants === 0">discuss</span>
       </a>
     </div>
-  </div>
 </div>
