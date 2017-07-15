@@ -2,17 +2,17 @@
   Loading your news here...
 </div>
 <div *ngIf="items" class="mainContent">
-  <ol class="list-group">
+  <ol class="list-group" start="{{ listStart }}">
     <li *ngFor = "let item of items"
         class="list-group-item justify-content-between">
         <item [item]="item"></item>
     </li>
   </ol>
   <div class="nav">
-    <a href="" class="prev">
+    <a *ngIf = "listStart !==1" [routerLink]="['/'+storiesType, pageNum -1]" class="prev">
       < Prev
     </a>
-    <a href="" class="More">
+    <a *ngIf = "items.length === 30" [routerLink]="['/'+ storiesType, pageNum + 1]" class="More">
       More >
     </a>
   </div>
