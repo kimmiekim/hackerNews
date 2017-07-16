@@ -12,7 +12,7 @@ import { ItemComponent } from './item/item.component';
 import { ItemCommentsComponent } from './item-comments/item-comments.component';
 
 import { HackernewsApiService } from './hackernews-api.service';
-import { DomainPipe } from './domain.pipe';
+
 import { routing } from './app.routes';
 import { CommentTreeComponent } from './comment-tree/comment-tree.component';
 import { CommentComponent } from './comment/comment.component';
@@ -25,7 +25,6 @@ import { CommentComponent } from './comment/comment.component';
     StoriesComponent,
     FooterComponent,
     ItemComponent,
-    DomainPipe,
     ItemCommentsComponent,
     CommentTreeComponent,
     CommentComponent
@@ -34,7 +33,6 @@ import { CommentComponent } from './comment/comment.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    MomentModule,
     routing
   ],
   providers: [HackernewsApiService],
