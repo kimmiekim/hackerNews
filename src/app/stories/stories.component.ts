@@ -30,7 +30,7 @@ export class StoriesComponent implements OnInit {
         .subscribe(data => this.storiesType = (data as any).storiesType);
 
     this.pageSub = this.route.params.subscribe(params => {
-      this.pageNum = +params['page'] ? + params['page']: 1;
+      this.pageNum = +params['page'] ? +params['page']: 1;
       this._hackerNewsAPIService.fetchStories(this.storiesType, this.pageNum)
                                 .subscribe(
                                   items => this.items = items,

@@ -1,0 +1,5 @@
+<ul id="commentTree" class="list-group">
+  <li *ngFor = "let comment of commentTree" class="list-group-item">
+    <app-comment [comment]="comment"></app-comment>
+  </li>
+</ul>

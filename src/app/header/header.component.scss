@@ -1,10 +1,19 @@
+nav {
+  box-shadow: 0px 5px 25px #e80a89;
+  background-color: #222 !important;
+
+}
 .navbar-inverse .navbar-nav .nav-link{
   display:inline;
 }
 
 #logo {
-  color: pink;
+  // color: #FF0080;
   font-size: 70px;
+  background: -webkit-linear-gradient(left,#f15b2a,#e80a89);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
 #navbarToggleMenu li {

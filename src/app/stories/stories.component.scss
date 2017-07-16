@@ -3,10 +3,27 @@
 // }
 .list-group {
   margin-top: 130px;
+  li {
+    background-color: #222;
+    color: grey;
+  }
+}
+a {
+  color: white;
 }
 
-.mainContent {
+.mainStory {
   .nav {
     text-align: center;
+  }
+}
+
+.prevNext {
+  font-size: 25px;
+  text-align: center;
+  a:hover, a:focus {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
   }
 }

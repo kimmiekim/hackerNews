@@ -1,7 +1,7 @@
 
-<div id="content">
+<div class="mainContent">
     <p>
-      <a href="">
+      <a href="{{item.url}}">
         {{item.title}}
       </a>
       <span *ngIf="item.domain">({{item.domain}})</span>
@@ -10,13 +10,13 @@
       {{item.score}} points by
       <a href="">{{item.user}}</a>
       {{item.time_ago}} |
-      <a href="">
-        <span *ngIf="item.descendants !== 0">
+      <a [routerLink]="['/item', item.id]">
+        <span *ngIf="item.comments_count !== 0">
           {{item.comments_count}} comments
-          <span *ngIf="item.descendants === 1">comment</span>
-          <span *ngIf="item.descendants > 1">comments</span>
+          <span *ngIf="item.comments_count === 1">comment</span>
+          <span *ngIf="item.comments_count > 1">comments</span>
         </span>
-        <span *ngIf="item.descendants === 0">discuss</span>
+        <span *ngIf="item.comments_count === 0">discuss</span>
       </a>
     </div>
 </div>

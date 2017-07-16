@@ -2,3 +2,18 @@ html {
   position: relative;
   min-height: 100%;
 }
+
+.mainContent {
+  // margin-top: 130px;
+}
+
+body {
+  background-color: #222;
+  a{
+    color: white;
+  }
+  a:hover, a:focus {
+    color: #f15b2a;
+    font-size: 1.3em;
+  }
+}
