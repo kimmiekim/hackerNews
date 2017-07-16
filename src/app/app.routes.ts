@@ -4,7 +4,7 @@ import { StoriesComponent } from './stories/stories.component';
 import { ItemCommentsComponent } from './item-comments/item-comments.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'new/1', pathMatch: 'full'},
+  {path: '', redirectTo: '/news/1', pathMatch: 'full'},
   {path: 'news/:page', component: StoriesComponent, data: {storiesType: 'news'}},
   {path: 'newest/:page', component: StoriesComponent, data: {storiesType: 'newest'}},
   {path: 'show/:page', component: StoriesComponent, data: {storiesType: 'show'}},
